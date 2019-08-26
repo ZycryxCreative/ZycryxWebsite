@@ -1,0 +1,159 @@
+:root{
+    --bg-red: #df2727;
+    --bg-pink: #ff6262;  
+    --bg-green: #12ad27;
+    --bg-blue: #116be2;
+    --bg-gray-blue: #05080e;
+    --bg-black:#000000e8;
+    --bg-white:#f5f5f5;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.red{
+    color: var(--bg-red);
+    margin-right: 10px;
+}
+
+.blue{
+    color: var(--bg-blue);
+    margin-right: 10px;
+
+}
+
+.green{
+    color:var(--bg-green);
+    margin-right: 10px;
+
+}
+
+body{
+    background: var(--bg-black);
+    color: var(--bg-white);
+    font-family: cursive;
+
+}
+
+.content{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    padding: 0.5em;
+}
+
+.logo{
+    text-align: center;
+    font-size: 2.3em;
+}
+
+
+.logo span{
+    color: var(--bg-red);
+}
+
+.contact-wrapper{
+    box-shadow: 0 0 20px 0 var(--bg-white);
+}
+
+.contact-wrapper > *{
+    padding: 1em;
+}
+
+.contact-form{
+    background: var(--bg-gray-blue);
+}
+
+.contact-info{
+    background: var(--bg-black);
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-form form p{
+    margin: 0 ;
+    padding: 1em;
+}
+
+.contact-form form .block{
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea,
+.contact-form form select{
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid var(--bg-blue);
+    color: var(--bg-white);
+}
+.contact-form form select{
+    background: var(--bg-gray-blue);
+    
+}
+
+.contact-form form textarea{
+    resize: vertical;
+    max-height: 160px;
+    min-height: 160px;
+}
+
+.contact-form form button{
+    background: var(--bg-red);
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    border-radius: 12px;
+}
+
+.contact-form form button:hover, button:focus{
+    background: var(--bg-blue);
+    transition: background-color 1s ease-out;
+    outline: 0px;
+}
+
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p{
+    text-align: center;
+    margin:  0 0 1rem 0;
+}
+
+
+.contact-info ul{
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul > li{
+    padding: .3em;
+}
+
+/* LARGE SIZE */
+
+
+@media (min-width: 700px){ 
+   
+    .contact-wrapper{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        padding: 1em;
+        text-align: left;
+    }
+}
